@@ -1,0 +1,52 @@
+{
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "react-hooks",
+    "jsx-a11y",
+    "cypress"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:jsx-a11y/recommended",
+    "plugin:cypress/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": [".vite.config.ts", "dev-dist", "dist", "node_modules"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/camelcase": "off",
+    "linebreak-style": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/control-has-associated-label": "error",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "react/prop-types": "off",
+    "no-param-reassign": "off",
+    "consistent-return": "off",
+    "no-plusplus": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-restricted-syntax": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/no-namespace": "off"
+  }
+}
